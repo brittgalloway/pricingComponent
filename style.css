@@ -134,6 +134,11 @@ ul {
   font-size: 1em;
 }
 
+ul li {
+  padding: 0.5em 0;
+  border-bottom: solid 1px white;
+}
+
 .cardPurple {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#a3a8f0), to(#696fdd));
   background-image: linear-gradient(to bottom right, #a3a8f0, #696fdd);
@@ -200,6 +205,10 @@ ul {
 
 .cardWhite hr {
   width: 100%;
+}
+
+.cardWhite li {
+  border-bottom: solid 0.75px #6d708d;
 }
 
 .cardWhite button {

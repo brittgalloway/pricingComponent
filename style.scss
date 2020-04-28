@@ -134,6 +134,10 @@ ul {
   list-style-type: none;
   font-family: $theFont;
   font-size: 1em;
+  li {
+    padding: 0.5em 0;
+    border-bottom: solid 1px white;
+  }
 }
 .cardPurple {
   background-image: $LinearGradient;
@@ -157,7 +161,9 @@ ul {
   @include card;
   z-index: 1;
   height: 18.5em;
-
+  li {
+    border-bottom: solid 0.75px $GrayishBlue;
+  }
   button {
     @include btn;
     background-image: $LinearGradient;

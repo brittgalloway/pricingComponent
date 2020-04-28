@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+body {
+  overflow-x: hidden;
+  background-color: #f6f6fe;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #494c5f;
+}
+
+a:hover {
+  color: #b3b5c6;
+}
+
+p {
+  font-size: 15px;
+  color: #b3b5c6;
+}
+
+h2 {
+  color: #6d708d;
+  margin-top: 2em;
+}
+
+#top {
+  background-image: url("images/bg-top.svg");
+  width: 24vw;
+  height: 88vh;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-repeat: no-repeat;
+}
+
+section {
+  margin-top: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2em auto;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 1em;
+  margin: 0 2em;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1em;
+  width: 1em;
+  left: 0em;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#a3a8f0), to(#696fdd));
+  background-image: linear-gradient(to bottom right, #a3a8f0, #696fdd);
+}
+
+input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #2196f3;
+          box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(1em);
+  transform: translateX(1em);
+}
+
+ul {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  list-style-type: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+}
+
+.cardPurple {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#a3a8f0), to(#696fdd));
+  background-image: linear-gradient(to bottom right, #a3a8f0, #696fdd);
+  color: white;
+  width: 200px;
+  padding: 2em 3em;
+  border-radius: 0.5em;
+  -webkit-box-shadow: 0px 14px 30px -11px #6d708d;
+          box-shadow: 0px 14px 30px -11px #6d708d;
+  z-index: 2;
+  height: 20em;
+}
+
+.cardPurple h1 {
+  font-size: 3em;
+  margin: 0.25em auto;
+}
+
+.cardPurple h2 {
+  font-size: 1em;
+  margin-top: 0.5em;
+}
+
+.cardPurple hr {
+  width: 100%;
+}
+
+.cardPurple h2 {
+  color: white;
+}
+
+.cardPurple button {
+  margin-top: 1em;
+  padding: 1em 4em;
+  border: none;
+  border-radius: 0.5em;
+  cursor: pointer;
+  margin-top: 1.5em;
+  background-color: white;
+  color: linear-gradient(to bottom right, #a3a8f0, #696fdd);
+}
+
+.cardWhite {
+  color: #494c5f;
+  background-color: white;
+  width: 200px;
+  padding: 2em 3em;
+  border-radius: 0.5em;
+  -webkit-box-shadow: 0px 14px 30px -11px #6d708d;
+          box-shadow: 0px 14px 30px -11px #6d708d;
+  z-index: 1;
+  height: 18.5em;
+}
+
+.cardWhite h1 {
+  font-size: 3em;
+  margin: 0.25em auto;
+}
+
+.cardWhite h2 {
+  font-size: 1em;
+  margin-top: 0.5em;
+}
+
+.cardWhite hr {
+  width: 100%;
+}
+
+.cardWhite button {
+  margin-top: 1em;
+  padding: 1em 4em;
+  border: none;
+  border-radius: 0.5em;
+  cursor: pointer;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#a3a8f0), to(#696fdd));
+  background-image: linear-gradient(to bottom right, #a3a8f0, #696fdd);
+  color: white;
+}
+
+#bottom {
+  background-image: url("images/bg-bottom.svg");
+  width: 23vw;
+  height: 40vh;
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-repeat: no-repeat;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1em;
+}
+
+.hidden {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */

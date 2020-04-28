@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+$LinearGradient: linear-gradient(
+  to bottom right,
+  hsl(236, 72%, 79%),
+  hsl(237, 63%, 64%)
+);
+$VeryLightGrayishBlue: hsl(240, 78%, 98%);
+$LightGrayishBlue: hsl(234, 14%, 74%);
+$GrayishBlue: hsl(233, 13%, 49%);
+$DarkGrayishBlue: hsl(232, 13%, 33%);
+$theFont: "Montserrat", sans-serif;
+
+body {
+  overflow-x: hidden;
+  background-color: $VeryLightGrayishBlue;
+  text-align: center;
+  font-family: $theFont;
+}
+a {
+  text-decoration: none;
+  color: $DarkGrayishBlue;
+  &:hover {
+    color: $LightGrayishBlue;
+  }
+}
+p {
+  font-size: 15px;
+  color: $LightGrayishBlue;
+}
+h2 {
+  color: $GrayishBlue;
+  margin-top: 2em;
+}
+#top {
+  background-image: url("images/bg-top.svg");
+  width: 24vw;
+  height: 88vh;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-repeat: no-repeat;
+}
+section {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+@mixin card {
+  h1 {
+    font-size: 3em;
+    margin: 0.25em auto;
+  }
+  h2 {
+    font-size: 1em;
+    margin-top: 0.5em;
+  }
+  hr {
+    width: 100%;
+  }
+  width: 200px;
+  padding: 2em 3em;
+  border-radius: 0.5em;
+  box-shadow: 0px 14px 30px -11px $GrayishBlue;
+}
+@mixin btn {
+  margin-top: 1em;
+  padding: 1em 4em;
+  border: none;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+#toggle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 2em auto;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 1em;
+  margin: 0 2em;
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+  &:before {
+    position: absolute;
+    content: "";
+    height: 1em;
+    width: 1em;
+    left: 0em;
+
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+}
+input:checked + .slider {
+  background-image: $LinearGradient;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(1em);
+  -ms-transform: translateX(1em);
+  transform: translateX(1em);
+}
+ul {
+  margin-block-start: 0;
+  padding-inline-start: 0;
+  list-style-type: none;
+  font-family: $theFont;
+  font-size: 1em;
+}
+.cardPurple {
+  background-image: $LinearGradient;
+  color: white;
+  @include card;
+  z-index: 2;
+  height: 20em;
+  h2 {
+    color: white;
+  }
+  button {
+    @include btn;
+    margin-top: 1.5em;
+    background-color: white;
+    color: $LinearGradient;
+  }
+}
+.cardWhite {
+  color: $DarkGrayishBlue;
+  background-color: white;
+  @include card;
+  z-index: 1;
+  height: 18.5em;
+
+  button {
+    @include btn;
+    background-image: $LinearGradient;
+    color: white;
+  }
+}
+#bottom {
+  background-image: url("images/bg-bottom.svg");
+  width: 23vw;
+  height: 40vh;
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-repeat: no-repeat;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1em;
+}
+
+.hidden {
+  display: none;
+}
+@media (min-width: 375px) {
+}

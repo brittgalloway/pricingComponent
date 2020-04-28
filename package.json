@@ -1,0 +1,27 @@
+{
+  "name": "pricingcomponent",
+  "version": "1.0.0",
+  "description": "coding challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brittgalloway/pricingComponent.git"
+  },
+  "keywords": [
+    "css",
+    "html"
+  ],
+  "author": "Brittney Galloway",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brittgalloway/pricingComponent/issues"
+  },
+  "homepage": "https://github.com/brittgalloway/pricingComponent#readme",
+  "dependencies": {
+    "jquery": "^3.5.0",
+    "node-sass": "^4.13.1"
+  }
+}

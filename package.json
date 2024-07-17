@@ -22,6 +22,6 @@
   "homepage": "https://github.com/brittgalloway/pricingComponent#readme",
   "dependencies": {
     "jquery": "^3.5.0",
-    "node-sass": "^4.13.1"
+    "node-sass": "^9.0.0"
   }
 }
